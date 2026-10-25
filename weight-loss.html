@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12-Week Weight-Loss Program · Julie — Personal Training & Online Coaching</title>
+<meta name="description" content="An 8–12-week weight-loss program delivered as online coaching by Julie, 2nd Place — Emerald Cup 2025. Personal training plan, your exact macros, weekly check-ins.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-dim: #8B6914;
+    --gold-glow: rgba(201,168,76,0.15);
+    --dark: #0A0A0A;
+    --dark-2: #111111;
+    --dark-3: #181818;
+    --dark-4: #202020;
+    --text: #EDE5D5;
+    --text-dim: #8A8070;
+    --text-mid: #B8AA96;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--dark); color: var(--text); font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 1000;
+  }
+  .section { max-width: 1100px; margin: 0 auto; padding: 96px 40px; }
+  .section-eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 0.45em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .section-eyebrow::after { content: ''; flex: 1; max-width: 60px; height: 1px; background: var(--gold-dim); }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 5vw, 58px); font-weight: 300; line-height: 1.05; color: var(--text); margin-bottom: 20px; }
+  .section-title em { font-style: italic; color: var(--gold-light); }
+  .section-sub { font-size: 14px; color: var(--text-dim); line-height: 1.9; max-width: 640px; }
+  .btn-primary { display: inline-block; background: var(--gold); color: var(--dark); font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; text-decoration: none; padding: 16px 32px; border-radius: 1px; transition: background 0.2s, transform 0.2s; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-ghost { display: inline-block; border: 1px solid rgba(201,168,76,0.4); color: var(--gold); font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.35em; text-transform: uppercase; text-decoration: none; padding: 16px 32px; border-radius: 1px; transition: border-color 0.2s, color 0.2s, transform 0.2s; }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold-light); transform: translateY(-2px); }
+
+  /* ── TOP BAR ── */
+  .topbar { max-width: 1100px; margin: 0 auto; padding: 28px 40px 0; display: flex; justify-content: space-between; align-items: center; }
+  .topbar a { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+  .topbar a:hover { color: var(--gold); }
+  .topbar .brand { font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.08em; color: var(--text); text-transform: none; }
+  .topbar .brand em { font-style: italic; color: var(--gold-light); }
+
+  /* ── HERO ── */
+  .wl-hero { max-width: 1100px; margin: 0 auto; padding: 90px 40px 40px; text-align: left; position: relative; }
+  .wl-hero::before { content: ''; position: absolute; top: 10%; right: 0; width: 400px; height: 400px; background: radial-gradient(ellipse, rgba(201,168,76,0.08) 0%, transparent 70%); pointer-events: none; }
+  .wl-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 7vw, 88px); font-weight: 300; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .wl-hero h1 em { font-style: italic; color: var(--gold-light); display: block; }
+  .wl-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(19px, 2.5vw, 24px); font-style: italic; font-weight: 300; color: var(--text-mid); line-height: 1.5; max-width: 560px; margin: 24px 0 36px; }
+  .wl-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
+  .wl-creds { display: flex; flex-direction: column; gap: 10px; }
+  .cred-item { display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); }
+  .cred-item::before { content: ''; display: block; width: 18px; height: 1px; background: var(--gold); flex-shrink: 0; }
+
+  /* ── WHO ── */
+  .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 44px; }
+  .who-item { background: var(--dark-3); border: 1px solid rgba(201,168,76,0.15); border-radius: 2px; padding: 28px 30px; font-size: 13px; color: var(--text-mid); line-height: 1.8; }
+  .who-item b { display: block; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text); margin-bottom: 8px; }
+
+  /* ── WHAT YOU GET ── */
+  .get-list { margin-top: 44px; display: flex; flex-direction: column; gap: 0; border-top: 1px solid rgba(255,255,255,0.06); }
+  .get-row { display: grid; grid-template-columns: 56px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .get-num { font-family: 'Cormorant Garamond', serif; font-size: 30px; color: var(--gold); line-height: 1; }
+  .get-row h3 { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text); margin-bottom: 8px; font-weight: 600; }
+  .get-row p { font-size: 13px; color: var(--text-dim); line-height: 1.9; }
+
+  /* ── PHASES ── */
+  .how-steps { display: flex; gap: 0; justify-content: center; max-width: 900px; margin: 48px auto 0; position: relative; }
+  .how-steps::before { content: ''; position: absolute; top: 28px; left: 80px; right: 80px; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), rgba(201,168,76,0.3), transparent); }
+  .how-step { flex: 1; text-align: center; padding: 0 16px; }
+  .how-num { width: 56px; height: 56px; border: 1px solid rgba(201,168,76,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--gold); background: var(--dark-3); position: relative; z-index: 1; }
+  .how-title { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text); margin-bottom: 8px; }
+  .how-desc { font-size: 12px; color: var(--text-dim); line-height: 1.7; }
+  .phase-note { text-align: center; font-size: 12px; color: var(--text-dim); margin-top: 36px; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 18px; }
+
+  /* ── PRICING ── */
+  .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 44px; }
+  .online-card { background: var(--dark-3); border: 1px solid rgba(201,168,76,0.25); border-radius: 2px; padding: 44px 40px; text-align: center; position: relative; overflow: hidden; }
+  .online-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .online-card.featured { border-color: rgba(201,168,76,0.55); background: linear-gradient(135deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.02) 100%); }
+  .online-card .badge { position: absolute; top: 0; right: 20px; background: var(--gold); color: var(--dark); font-size: 8px; font-weight: 700; letter-spacing: 0.3em; padding: 4px 10px; border-radius: 0 0 3px 3px; }
+  .online-card .card-name { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--text); margin-bottom: 6px; }
+  .online-card .card-desc { font-size: 10px; color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 28px; }
+  .price-big { font-family: 'Cormorant Garamond', serif; font-size: 68px; font-weight: 600; line-height: 1; color: var(--gold-light); letter-spacing: -0.02em; }
+  .price-big sup { font-size: 28px; font-weight: 300; vertical-align: top; margin-top: 12px; display: inline-block; }
+  .price-period { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-dim); margin-top: 8px; }
+  .price-alt { font-size: 12px; color: var(--text-dim); margin-top: 18px; line-height: 1.8; }
+  .price-features { list-style: none; margin: 28px 0; text-align: left; }
+  .price-features li { font-size: 13px; color: var(--text-mid); line-height: 1.8; padding-left: 22px; position: relative; margin-bottom: 8px; }
+  .price-features li::before { content: ''; position: absolute; left: 0; top: 10px; width: 12px; height: 1px; background: var(--gold); }
+  .price-note { text-align: center; font-size: 12px; color: var(--text-dim); line-height: 1.9; margin-top: 28px; }
+  .price-note a { color: var(--gold); text-decoration: none; }
+
+  /* ── FAQ ── */
+  .faq-list { max-width: 700px; margin: 44px auto 0; }
+  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .faq-q { width: 100%; background: none; border: none; color: var(--text); font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.05em; padding: 22px 0; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .faq-q:hover { color: var(--gold); }
+  .faq-arrow { color: var(--gold); font-size: 18px; flex-shrink: 0; transition: transform 0.25s; }
+  .faq-item.open .faq-arrow { transform: rotate(45deg); }
+  .faq-a { font-size: 13px; color: var(--text-dim); line-height: 1.9; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s; }
+  .faq-item.open .faq-a { max-height: 200px; padding: 0 0 20px; }
+
+  /* ── FINAL CTA ── */
+  .final-cta { text-align: center; }
+  .final-cta .section-eyebrow { justify-content: center; }
+  .final-cta .section-eyebrow::after { display: none; }
+  .final-cta .section-sub { margin: 0 auto 36px; }
+
+  footer { background: var(--dark-2); border-top: 1px solid rgba(201,168,76,0.1); padding: 56px 40px 40px; text-align: center; }
+  .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; color: var(--text); margin-bottom: 6px; }
+  .footer-name em { font-style: italic; color: var(--gold-light); }
+  .footer-tagline { font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 28px; }
+  .footer-links { display: flex; justify-content: center; align-items: center; gap: 28px; flex-wrap: wrap; margin-bottom: 36px; }
+  .footer-links a { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-links .sep { color: var(--gold-dim); font-size: 8px; }
+  .footer-copy { font-size: 10px; color: var(--text-dim); opacity: 0.5; margin-top: 28px; letter-spacing: 0.1em; }
+
+  @media (max-width: 768px) {
+    .section { padding: 64px 24px; }
+    .who-grid, .price-grid { grid-template-columns: 1fr; }
+    .how-steps { flex-direction: column; gap: 32px; }
+    .how-steps::before { display: none; }
+    .get-row { grid-template-columns: 40px 1fr; gap: 16px; }
+    .topbar { padding: 24px 24px 0; }
+    .wl-hero { padding: 64px 24px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html" class="brand">Julie <em>Gold</em></a>
+  <a href="index.html">← Back to main site</a>
+</div>
+
+<header class="wl-hero">
+  <div class="section-eyebrow">12-Week Weight-Loss Program · Online Coaching</div>
+  <h1>Lose weight <em>without starving yourself.</em></h1>
+  <p class="wl-tagline">Workouts tone your body — weight is lost in the kitchen. This 8–12-week program pairs a personal training plan with your exact macros, so you stop guessing and start seeing the scale move.</p>
+  <div class="wl-cta">
+    <a href="index.html#contact" class="btn-primary">Start with a consultation — $75</a>
+    <a href="https://www.instagram.com/gordiichenko_" target="_blank" rel="noopener" class="btn-ghost">Message on Instagram</a>
+  </div>
+  <div class="wl-creds">
+    <div class="cred-item">2nd Place — Emerald Cup 2025</div>
+    <div class="cred-item">Training clients for 3 years — many stay 1–1.5 years</div>
+    <div class="cred-item">Consultation fee credited toward your package</div>
+  </div>
+</header>
+
+<section>
+  <div class="section">
+    <div class="section-eyebrow">Who it's for</div>
+    <h2 class="section-title">Made for the woman <em>who tried “clean eating”</em> — and stayed stuck.</h2>
+    <div class="who-grid">
+      <div class="who-item"><b>You eat “clean” but the weight won't move</b>Your problem isn't willpower — it's numbers. We calculate your real macros instead of guessing.</div>
+      <div class="who-item"><b>You want a toned body, not just a smaller number</b>Glutes, posture, back, full body — training is built in, not bolted on.</div>
+      <div class="who-item"><b>You're a beginner, or returning after a break</b>Technique is taught from zero. No judgment, no “keep up with the class”.</div>
+      <div class="who-item"><b>Gym or home</b>The program is built around what you actually have — not a gym you don't go to.</div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--dark-2);">
+  <div class="section">
+    <div class="section-eyebrow">What you get</div>
+    <h2 class="section-title">12 weeks, <em>fully coached.</em></h2>
+    <div class="get-list">
+      <div class="get-row">
+        <div class="get-num">01</div>
+        <div><h3>Personal program</h3><p>Gym or home, progressing every week — glutes, posture, back, full body. Built for your level and your equipment.</p></div>
+      </div>
+      <div class="get-row">
+        <div class="get-num">02</div>
+        <div><h3>Your macros, calculated</h3><p>Calories and protein, carbs and fats for YOUR body and goal, with a real-plate example. The free KBJU guide is the teaser — this is the full version, adjusted as you progress.</p></div>
+      </div>
+      <div class="get-row">
+        <div class="get-num">03</div>
+        <div><h3>Weekly check-ins + video technique review</h3><p>Send your form videos, get corrections. Plateaus get handled — they don't end the program.</p></div>
+      </div>
+      <div class="get-row">
+        <div class="get-num">04</div>
+        <div><h3>Support between workouts</h3><p>You're not alone in the process. Questions get answered while they matter, not at the next session.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section">
+    <div class="section-eyebrow">How the 12 weeks run</div>
+    <h2 class="section-title">Four phases. <em>One result that stays.</em></h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-num">1–2</div>
+        <div class="how-title">Foundation</div>
+        <div class="how-desc">Assessment, macros, technique basics, habit setup.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">3–6</div>
+        <div class="how-title">Build</div>
+        <div class="how-desc">Progressive training, first visible changes, macro adjustments.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">7–10</div>
+        <div class="how-title">Push</div>
+        <div class="how-desc">The fat-loss phase. Strength up, plateaus handled.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">11–12</div>
+        <div class="how-title">Lock in</div>
+        <div class="how-desc">Results review and a maintenance plan so the weight stays off.</div>
+      </div>
+    </div>
+    <p class="phase-note">Prefer a shorter run? The 8-week version follows the same structure, compressed — 12 weeks is the recommended full run.</p>
+  </div>
+</section>
+
+<section style="background: var(--dark-2);">
+  <div class="section">
+    <div class="section-eyebrow">Pricing</div>
+    <h2 class="section-title">Start with a consultation. <em>Then commit.</em></h2>
+    <p class="section-sub">Every program starts with a consultation &amp; assessment — and its $75 fee is credited toward your package, so it costs you nothing extra if you continue.</p>
+    <div class="price-grid">
+      <div class="online-card featured">
+        <div class="badge">STANDARD</div>
+        <div class="card-name">12-Week Program</div>
+        <div class="card-desc">Online coaching · the full run</div>
+        <div class="price-big"><sup>$</sup>750</div>
+        <div class="price-period">for 3 months, paid upfront</div>
+        <ul class="price-features">
+          <li>Personal training program, progressing weekly</li>
+          <li>Your macros, calculated and adjusted as you go</li>
+          <li>Weekly check-ins + video technique review</li>
+          <li>Support between workouts</li>
+        </ul>
+        <a href="index.html#contact" class="btn-primary">Book the $75 consultation</a>
+        <p class="price-alt">Prefer monthly? $300/month — same coaching, paid month by month.</p>
+      </div>
+      <div class="online-card">
+        <div class="card-name">Premium Coaching</div>
+        <div class="card-desc">Online coaching · everything, faster</div>
+        <div class="price-big"><sup>$</sup>400</div>
+        <div class="price-period">per month</div>
+        <ul class="price-features">
+          <li>Everything in the standard program</li>
+          <li>Weekly video calls</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="index.html#contact" class="btn-ghost">Book the $75 consultation</a>
+        <p class="price-alt">Start with the same $75 consultation, credited toward your package.</p>
+      </div>
+    </div>
+    <p class="price-note">In-person training in Kent is also available: single session $100 · packages 8/$720, 12/$1020, 16/$1280, 20/$1500.<br>See the full menu on the <a href="index.html#pricing">main site</a>.</p>
+  </div>
+</section>
+
+<section>
+  <div class="section">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-title">Questions, <em>answered honestly.</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" type="button">Do I have to diet hard? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">No — no starving diets. Macros are set so you can eat and still lose.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">I'm a total beginner — is this for me? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Perfect — technique from zero is Julie's specialty. The program meets you where you are.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Home or gym? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">Either. The program is built for your setup — a full gym or a living room with dumbbells.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">What if I plateau? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">That's what check-ins are for — macros and training get adjusted instead of the program stalling.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Is this the same as the free KBJU guide? <span class="faq-arrow">+</span></button>
+        <div class="faq-a">The guide teaches you to calculate your numbers in 5 minutes. The program adjusts them for you, week by week, with training and accountability.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--dark-2);">
+  <div class="section final-cta">
+    <div class="section-eyebrow">Ready when you are</div>
+    <h2 class="section-title">Stop guessing. <em>Start seeing the scale move.</em></h2>
+    <p class="section-sub">Book the $75 consultation &amp; assessment — credited toward your package — and we'll build your plan together.</p>
+    <a href="index.html#contact" class="btn-primary">Book your consultation — $75</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">Julie <em>Gold</em></div>
+  <div class="footer-tagline">Built by Julie · Personal Training &amp; Online Coaching</div>
+  <div class="footer-links">
+    <a href="index.html">Main site</a><span class="sep">·</span>
+    <a href="index.html#pricing">Pricing</a><span class="sep">·</span>
+    <a href="https://www.instagram.com/gordiichenko_" target="_blank" rel="noopener">Instagram</a><span class="sep">·</span>
+    <a href="mailto:YuliiaCEO@astragoldllc.com">Email</a>
+  </div>
+  <div class="footer-copy">© 2026 Julie Gold · 2nd Place — Emerald Cup 2025</div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btn.closest('.faq-item').classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>
